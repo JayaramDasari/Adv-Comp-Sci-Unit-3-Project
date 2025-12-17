@@ -31,3 +31,11 @@ class ScoreTracker:
 
                 avg = average(scores)
                 high = highest_score(scores)
+
+                print(subject)
+                print("Scores:", scores)
+                print("Average:", round(avg,2))
+                print(" Highest:", high)
+
+        def plot(self):
+            subject = list(self.data.keys())
