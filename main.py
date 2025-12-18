@@ -38,4 +38,16 @@ class ScoreTracker:
                 print(" Highest:", high)
 
         def plot(self):
-            subject = list(self.data.keys())
+            subjects = list(self.data.keys())
+            averages = []
+
+            for subject in subjects:
+                averages.append(average(self.data[subject]))
+
+            plt.bar(subjects, averages)
+            plt.xlabel("Subject")
+            plt.ylabel("Average score")
+            plt.title("Average score over all subjects")
+            plt.show()
+
+
